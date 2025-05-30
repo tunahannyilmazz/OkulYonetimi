@@ -1,29 +1,41 @@
-public class Student {  // Student sınıfı, öğrenci bilgilerini tutar
-    private int id;  // Öğrencinin id'si
-    private String name;  // Öğrencinin ismi
-    private String surname;  // Öğrencinin soyismi
+public class Student {
+    private int id;
+    private String name;
+    private String surname;
 
-    // Constructor (yapıcı metod) - Öğrenciyi yaratırken id, isim ve soyisim alır
+    // Constructor
     public Student(int id, String name, String surname) {
         this.id = id;
         this.name = name;
         this.surname = surname;
     }
 
-    // Getter metotları (id, name, surname bilgilerini almak için)
+    // Getter ve setter metodları
     public int getId() {
         return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public String getSurname() {
         return surname;
     }
 
-    // Öğrenci bilgilerini düzgün bir şekilde yazdırabilmek için toString metodu
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    // ToString metodunu override ederek öğrenci bilgilerini yazdırıyoruz
     @Override
     public String toString() {
         return "Student [id=" + id + ", name=" + name + ", surname=" + surname + "]";
